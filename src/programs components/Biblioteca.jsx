@@ -1,8 +1,8 @@
 import '../Biblioteca Styles/Biblioteca.css';
-import bib1 from '../images/bib1.jpg';
-import bib2 from '../images/bib2.jpg';
-import bib3 from '../images/bib3.jpg';
-import bib4 from '../images/bib4.jpg';
+import bib1 from '../images/Bib1.jpg';
+import bib2 from '../images/Bib2.jpg';
+import bib3 from '../images/Bib3.jpg';
+import bib4 from '../images/Bib4.jpg';
 
 function Biblioteca() {
     return (
