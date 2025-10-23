@@ -1,6 +1,6 @@
 import '../styles/Alianzas.css';
 import adsis from '../logos/adsis.webp'
-import arcoiris from '../logos/Arcoiris.webp'
+import arcoiris from '../logos/ArcoIris.webp'
 import lpgc from '../logos/LPGC.png'
 import socem from '../logos/SOCEM.png'
 import unslp from '../logos/UNSLP.png'
