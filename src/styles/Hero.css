@@ -1,0 +1,146 @@
+.hero-container {
+    width: 100%;
+}
+
+/* Sección principal con imagen de fondo */
+.hero-section {
+    height: 80vh;
+    min-height: 500px;
+    background-image: url('../images/conocenos.png'); /* Cambia por una imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 100px;
+    right: 0;
+    bottom: 0;
+    background: rgba(40, 56, 144, 0.5);
+    display: flex;
+    align-items: center;
+    max-width: 700px;
+}
+
+.hero-content {
+    max-width: 600px;
+    padding: 0 80px;
+    margin: 0 auto;
+    color: white;
+    text-align: left;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 30px;
+    letter-spacing: -1px;
+    line-height: 1.2;
+}
+
+.hero-description {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    font-weight: 600;
+    margin: 0;
+    text-align: justify;
+}
+
+/* Sección de información */
+.info-section {
+    background-color: white;
+    padding: 80px 0;
+}
+
+.info-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.info-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.info-paragraph {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.info-paragraph:last-child {
+    margin-bottom: 0;
+}
+
+.info-paragraph strong {
+    color: #283890;
+    font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 50vh;
+        min-height: 400px;
+        justify-content: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        padding: 0 30px;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+    }
+
+    .hero-description {
+        font-size: 1.1rem;
+        line-height: 1.5;
+    }
+
+    .info-section {
+        padding: 60px 0;
+    }
+
+    .info-paragraph {
+        font-size: 1rem;
+        line-height: 1.7;
+        text-align: left;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-content {
+        padding: 0 20px;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .info-section {
+        padding: 40px 0;
+    }
+
+    .info-paragraph {
+        font-size: 0.95rem;
+        margin-bottom: 25px;
+    }
+}

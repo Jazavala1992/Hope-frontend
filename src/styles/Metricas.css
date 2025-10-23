@@ -1,0 +1,183 @@
+.metricas-container {
+  background-color: #E9E3DB;
+  padding: 60px 0;
+  margin-top: 0;
+}
+
+.metricas-title {
+  color: #283890;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.metricas-year {
+  color: #283890;
+  font-size: 2.3rem;
+  font-weight: 650;
+  margin-bottom: 60px;
+}
+
+.metricas-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+}
+
+.metrica-item {
+  text-align: center;
+  padding: 0 20px;
+  position: relative;
+  flex: 1;
+  min-height: 400px;
+}
+
+.metrica-icono-container {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.metrica-icono {
+  background-color: #2BBEE8;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  box-shadow: 0 4px 15px rgba(43, 190, 232, 0.3);
+}
+
+.metrica-icono-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.metrica-numero {
+  color: #283890;
+  font-size: 6rem;
+  font-weight: 100;
+  margin-bottom: 15px;
+  line-height: 1;
+}
+
+.metrica-descripcion {
+  color: #283890;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.3;
+  max-width: 240px;
+  padding-top: 10px;
+  margin: 0 auto;
+}
+
+.metricas-header {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+/* LÍNEAS DIVISORIAS */
+@media (min-width: 992px) {
+  .metrica-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -20px; /* Mover hacia afuera */
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    height: 170px;
+    background-color: #2BBEE8 !important;
+    z-index: 999;
+  }
+}
+
+/* Media queries responsive */
+@media (max-width: 991px) {
+  .metricas-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .metrica-item {
+    min-height: auto;
+    margin-bottom: 40px;
+  }
+  
+  .metrica-item::after {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .metricas-container {
+    padding: 50px 0;
+  }
+  
+  .metricas-title {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .metricas-year {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+  }
+  
+  .metrica-icono {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .metrica-icono-img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .metrica-numero {
+    font-size: 3rem;
+  }
+  
+  .metrica-descripcion {
+    font-size: 1rem;
+  }
+  
+  .metrica-item {
+    padding: 0 10px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .metricas-title {
+    font-size: 1.8rem;
+  }
+  
+  .metricas-year {
+    font-size: 1.5rem;
+  }
+  
+  .metrica-icono {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .metrica-icono-img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .metrica-numero {
+    font-size: 2.5rem;
+  }
+  
+  .metrica-descripcion {
+    font-size: 0.9rem;
+  }
+}

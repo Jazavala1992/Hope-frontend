@@ -1,0 +1,206 @@
+.programas-section {
+    padding-top: 60px;
+    background-color: white;
+    margin: 0;
+}
+
+.container {
+    max-width: 100%; 
+    margin: 0;
+    padding: 0; 
+    width: 100vw; 
+}
+
+.programas-titulo {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #283890;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+    padding: 0 20px; /* Agregar padding solo al título */
+}
+
+.programas-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    width: 100%; /* Asegurar que ocupe todo el ancho */
+}
+
+.programa-card {
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    width: 100vw; /* Ocupar todo el viewport width */
+    margin-left: calc(-50vw + 50%); /* Centrar y expandir */
+}
+
+.programa-card.azul {
+    background: #283890;
+    color: white;
+}
+
+.programa-card.celeste {
+    background: #17B5E9;
+    color: white;
+}
+
+.programa-contenido {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    min-height: 400px;
+}
+
+/* Cards azules: imagen a la derecha */
+.programa-card.azul .programa-contenido {
+    grid-template-columns: 1fr 1fr;
+}
+
+.programa-card.azul .programa-texto {
+    order: 2;
+}
+
+.programa-card.azul .programa-imagen {
+    order: 1;
+}
+
+/* Cards celestes: imagen a la izquierda */
+.programa-card.celeste .programa-contenido {
+    grid-template-columns: 1fr 1fr;
+}
+
+.programa-card.celeste .programa-texto {
+    order: 1;
+}
+
+.programa-card.celeste .programa-imagen {
+    order: 2;
+}
+
+.programa-texto {
+    padding: 40px;
+    margin: 40px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Estilos para cards azules */
+.programa-card.azul .programa-texto h3 {
+    font-size: 2.5rem;
+    font-weight: 850;
+    color: #2BBEE8;
+    margin-bottom: 20px;
+    line-height: 1.3;
+    text-align: left;
+}
+
+.programa-card.azul .programa-texto p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: white;
+    font-weight: 750;
+    text-align: left;
+}
+
+/* Estilos para cards celestes */
+.programa-card.celeste .programa-texto h3 {
+    font-size: 2.5rem;
+    font-weight: 850;
+    color: #283890;
+    margin-bottom: 20px;
+    line-height: 1.3;
+    text-align: left;
+}
+
+.programa-card.celeste .programa-texto p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #fff;
+    font-weight: 750;
+    text-align: left;
+}
+
+.btn-leer-mas {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 15px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: left;
+    max-width: 160px;
+}
+
+/* Estilos específicos para botones según el tipo */
+.programa-card.azul .btn-leer-mas {
+    background-color: #2BBEE8;
+    border: 2px solid #2BBEE8;
+    color: white;
+}
+
+.programa-card.azul .btn-leer-mas:hover {
+    background-color: transparent;
+    border-color: #1a9cc7;
+    color: #2BBEE8;
+}
+
+.programa-card.celeste .btn-leer-mas {
+    background-color: #283890;
+    border: 2px solid #283890;
+    color: #ffff;
+    font-weight: 600;
+}
+
+.programa-card.celeste .btn-leer-mas:hover {
+    background-color: transparent;
+    color: #283890;
+    transform: translateY(-2px);
+}
+
+.programa-imagen {
+    position: relative;
+    overflow: hidden;
+}
+
+.programa-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.programa-card:hover .programa-imagen img {
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .programa-contenido {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .programa-card.azul .programa-texto,
+    .programa-card.celeste .programa-texto {
+        order: 1 !important;
+        padding: 30px 20px;
+    }
+    
+    .programa-card.azul .programa-imagen,
+    .programa-card.celeste .programa-imagen {
+        order: 2 !important;
+        min-height: 250px;
+    }
+    
+    .programas-titulo {
+        font-size: 2rem;
+    }
+}
