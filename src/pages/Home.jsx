@@ -4,14 +4,14 @@ import Programas from "../components/Programas";
 import Alianzas from "../components/Alianzas";
 import Footer from "../components/Footer";
 import Navigation from "../components/Navigation";
-import Carruselhistorias from "../components/Carruselhistorias";
+import CarruselHistorias from "../components/CarruselHistorias";
 
 function Home() {
   return (
     <>
       <Navigation />
       <Header />
-      <Carruselhistorias />
+      <CarruselHistorias />
       <Metricas />
       <Programas />
       <Alianzas />
