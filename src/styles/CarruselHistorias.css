@@ -91,3 +91,82 @@
     padding: 30px 15px;
   }
 }
+
+/* Mejoras adicionales para pantallas medianas y pequeñas */
+@media (max-width: 900px) {
+  .carrusel-container {
+    padding: 24px 16px;
+    margin: 24px auto 48px auto;
+  }
+  .carrusel-titulo {
+    font-size: 1.9rem;
+    margin-bottom: 20px;
+  }
+  /* Hacer que la imagen deje de ser absoluta y se coloque debajo del texto */
+  .carrusel-imagen {
+    position: relative;
+    top: auto;
+    right: auto;
+    z-index: 1;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 0;
+  }
+  .carrusel-imagen img {
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+  .carrusel-texto {
+    max-width: 100%;
+    background: #f5f3ef;
+    border-radius: 18px;
+  }
+}
+
+/* Separación para pantallas intermedias 601px - 769px */
+@media (min-width: 601px) and (max-width: 769px) {
+  .carrusel-container {
+    padding: 28px 20px;
+    margin: 40px auto 48px auto; /* separación moderada para no solapar con header */
+  }
+  .carrusel-slide {
+    min-height: auto;
+  }
+  .carrusel-imagen img {
+    height: 260px;
+  }
+}
+
+@media (max-width: 600px) {
+  .carrusel-container {
+    /* reducir padding horizontal en móviles y separar del componente superior */
+    padding: 20px 16px;
+    margin: 50px auto 48px auto; /* aumentar margen superior para evitar solapamiento */
+  }
+  .carrusel-titulo {
+    font-size: 1.6rem;
+  }
+  .carrusel-texto {
+    padding: 18px 12px;
+  }
+  .carrusel-nombre {
+    font-size: 1.4rem;
+  }
+  .carrusel-descripcion {
+    font-size: 1rem;
+  }
+  .carrusel-cita {
+    font-size: 0.95rem;
+  }
+  .carrusel-imagen img {
+    height: 200px;
+  }
+
+  /* Evitar alturas fijas que empujen o sobrepongan contenido en móvil */
+  .carrusel-slide {
+    min-height: auto;
+  }
+}

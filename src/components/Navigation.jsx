@@ -6,7 +6,10 @@ import '../styles/Navigation.css';
 function Navigation() {
   const navigate = useNavigate();
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [voluntariadoDropdownOpen, setVoluntariadoDropdownOpen] = useState(false);
   const dropdownTimeout = useRef(null);
+  const voluntariadoTimeout = useRef(null);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleProgramClick = (program) => {
     navigate(`/programas/${program}`);
@@ -21,13 +24,35 @@ function Navigation() {
     dropdownTimeout.current = setTimeout(() => setDropdownOpen(false), 120);
   };
 
+  // Handlers para Voluntariado dropdown
+  const handleVoluntariadoMouseEnter = () => {
+    if (voluntariadoTimeout.current) clearTimeout(voluntariadoTimeout.current);
+    setVoluntariadoDropdownOpen(true);
+  };
+  const handleVoluntariadoMouseLeave = () => {
+    voluntariadoTimeout.current = setTimeout(() => setVoluntariadoDropdownOpen(false), 120);
+  };
+
   return (
     <nav className="navbar-custom">
       <div className="navbar-content">
         <div className="navbar-brand-custom">
           <img alt="logo" src={logo} className="navbar-logo" />
         </div>
-        <ul className="navbar-links">
+
+        {/* Toggle móvil */}
+        <button
+          className="navbar-toggle"
+          aria-expanded={mobileOpen}
+          aria-label="Abrir menú"
+          onClick={() => setMobileOpen((s) => !s)}
+        >
+          <span className={`bar ${mobileOpen ? 'open' : ''}`}></span>
+          <span className={`bar ${mobileOpen ? 'open' : ''}`}></span>
+          <span className={`bar ${mobileOpen ? 'open' : ''}`}></span>
+        </button>
+
+        <ul className={`navbar-links ${mobileOpen ? 'mobile-open' : ''}`}>
           <li><Link to="/">Inicio</Link></li>
           <li><Link to="/conocenos">Conócenos</Link></li>
           <li
@@ -48,11 +73,16 @@ function Navigation() {
               <li onClick={() => handleProgramClick('esl')}>ESL - HOPE English as a Second Language</li>
               <li onClick={() => handleProgramClick('voluntariado')}>Voluntariado</li>
             </ul>
-          </li>
-          <li><Link to="/biblioteca">Prestamo de libros</Link></li>
+          </li> 
           <li><Link to="/contactanos">Contáctanos</Link></li>
         </ul>
-        <Link to="/Llevaesperanza" className="btn-esperanza">LLEVA ESPERANZA</Link>
+        <Link
+          to="/Llevaesperanza"
+          className={`btn-esperanza ${mobileOpen ? 'btn-esperanza--compact' : ''}`}
+          aria-expanded={mobileOpen ? 'true' : 'false'}
+        >
+          LLEVA ESPERANZA
+        </Link>
       </div>
     </nav>
   );

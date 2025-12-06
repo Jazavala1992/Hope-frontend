@@ -1,14 +1,20 @@
+import { useEffect } from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
+import Contacto from "../components/Contacto";
 
-function contactanos() {
+function Contactanos() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <Navigation />
-      <div>contactanos</div>
+      <Contacto />
       <Footer />
     </>
   );
 }
 
-export default contactanos;
+export default Contactanos;

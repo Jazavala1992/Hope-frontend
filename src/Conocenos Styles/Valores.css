@@ -1,0 +1,335 @@
+.valores-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+.valores-title {
+    font-size: 3rem;
+    font-weight:700;
+    margin-bottom: 20px;
+    color: #283890;
+}
+
+.escritura-valores {
+    font-size: 1.2rem;
+    text-align: center;
+    max-width: 800px;
+    margin-bottom: 40px;
+    color: #555555;
+}
+
+.valores-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "cristocentrico compasion fe bienestar"
+        "cristocentrico colaboracion servicio compromiso";
+    gap: 30px;
+    max-width: 1200px;
+    max-height: 600px;
+    font-size: 1.3rem;
+}
+
+.valores-cards > * {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0; /* Sin padding aquí, lo manejamos en card-front/back */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 260ms cubic-bezier(.2,.9,.3,1), box-shadow 260ms cubic-bezier(.2,.9,.3,1);
+    will-change: transform;
+    overflow: hidden; /* Esconde el contenido que se sale */
+    cursor: pointer;
+}
+
+/* Contenedor del flip - simple slide vertical */
+.card-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.5s ease;
+}
+
+/* Al hacer hover, deslizar hacia arriba */
+.valores-cards > *:hover .card-content {
+    transform: translateY(-100%);
+}
+
+/* Cara frontal y trasera - sin position absolute */
+.card-front-simple,
+.card-back-simple {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-shrink: 0; /* No se encogen */
+    padding: 20px;
+}
+
+.card-back-simple {
+    padding: 20px;
+}
+
+.card-description {
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.valores-cards .compromiso .card-description,
+.valores-cards .fe .card-description,
+.valores-cards .colaboracion .card-description {
+    color: #273890;
+}
+
+.valores-cards > *:hover,
+.valores-cards > *:focus {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    z-index: 2;
+}
+
+.valores-cards > *:focus {
+    outline: 3px solid rgba(40, 56, 144, 0.12);
+    outline-offset: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .valores-cards > * {
+        transition: none !important;
+        transform: none !important;
+    }
+}
+
+.valores-cards .cristocentrico {
+    grid-area: cristocentrico;
+}
+
+.valores-cards .cristocentrico {
+    background: linear-gradient(135deg, #1a2560 0%, #25368B 50%, #3d4db8 100%);
+}
+
+.valores-cards .compasion {
+    grid-area: compasion;
+}
+
+.valores-cards .compasion {
+    background: linear-gradient(135deg, #1a9bc7 0%, #2BBEE8 50%, #58d9f7 100%);
+}
+
+.valores-cards .fe {
+    grid-area: fe;
+}
+
+.valores-cards .fe {
+    background: linear-gradient(135deg, #e8dfc4 0%, #F3EDD9 50%, #fffbf0 100%);
+}
+
+.valores-cards .bienestar {
+    grid-area: bienestar;
+}
+
+.valores-cards .bienestar {
+    background: linear-gradient(135deg, #1a9bc7 0%, #2BBEE8 50%, #58d9f7 100%);
+}
+
+.valores-cards .colaboracion {
+    grid-area: colaboracion;
+}
+
+.valores-cards .colaboracion {
+    background: linear-gradient(135deg, #e8dfc4 0%, #F3EDD9 50%, #fffbf0 100%);
+}
+
+.valores-cards .servicio {
+    grid-area: servicio;
+}
+
+.valores-cards .servicio {
+    background: linear-gradient(135deg, #1a9bc7 0%, #2BBEE8 50%, #58d9f7 100%);
+}
+
+.valores-cards .compromiso {
+    grid-area: compromiso;
+}
+
+.valores-cards .compromiso {
+    background: linear-gradient(135deg, #e8dfc4 0%, #F3EDD9 50%, #fffbf0 100%);
+}
+
+.valores-cards .compromiso .valores-card-title,
+.valores-cards .fe .valores-card-title,
+.valores-cards .colaboracion .valores-card-title {
+    color: #273890;
+}
+
+.valores-cards img {
+    width: 170px;
+    height: 170px;
+    margin-bottom: 15px;
+}   
+
+.valores-cards .cristocentrico img {
+    width: 200px;
+    height: 250px;
+    margin-bottom: 15px;
+}   
+
+.valores-card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+}
+
+/* ========== ESTILOS RESPONSIVOS ========== */
+
+/* Tablets y pantallas medianas (<=900px) */
+@media (max-width: 900px) {
+    .valores-container {
+        padding: 32px 16px;
+    }
+
+    .valores-title {
+        font-size: 2.4rem;
+        margin-bottom: 16px;
+    }
+
+    .escritura-valores {
+        font-size: 1.1rem;
+        margin-bottom: 32px;
+        max-width: 90%;
+    }
+
+    .valores-cards {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas:
+            "cristocentrico cristocentrico"
+            "compasion fe"
+            "bienestar colaboracion"
+            "servicio compromiso";
+        gap: 20px;
+        max-height: none;
+        font-size: 1.2rem;
+    }
+
+    .valores-cards img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .valores-cards .cristocentrico img {
+        width: 160px;
+        height: 200px;
+    }
+
+    .valores-cards > * {
+        padding: 18px;
+    }
+}
+
+/* Móviles medianos (<=600px) */
+@media (max-width: 600px) {
+    .valores-container {
+        padding: 24px 12px;
+    }
+
+    .valores-title {
+        font-size: 1.9rem;
+        margin-bottom: 12px;
+    }
+
+    .escritura-valores {
+        font-size: 1rem;
+        margin-bottom: 24px;
+        padding: 0 8px;
+    }
+
+    .valores-cards {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "cristocentrico"
+            "compasion"
+            "fe"
+            "bienestar"
+            "colaboracion"
+            "servicio"
+            "compromiso";
+        gap: 16px;
+        font-size: 1.1rem;
+    }
+
+    .valores-cards img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .valores-cards .cristocentrico img {
+        width: 140px;
+        height: 170px;
+    }
+
+    .valores-cards > * {
+        padding: 16px 12px;
+    }
+
+    .valores-card-title {
+        font-size: 0.95rem;
+    }
+
+    /* Reducir animaciones en móvil para mejor rendimiento */
+    .valores-cards > *:hover,
+    .valores-cards > *:focus {
+        transform: translateY(-4px) scale(1.01);
+    }
+}
+
+/* Móviles muy pequeños (<=480px) */
+@media (max-width: 480px) {
+    .valores-container {
+        padding: 20px 8px;
+    }
+
+    .valores-title {
+        font-size: 1.6rem;
+    }
+
+    .escritura-valores {
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+    }
+
+    .valores-cards {
+        gap: 12px;
+        font-size: 1rem;
+    }
+
+    .valores-cards img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .valores-cards .cristocentrico img {
+        width: 120px;
+        height: 150px;
+    }
+
+    .valores-cards > * {
+        padding: 14px 10px;
+    }
+
+    .valores-card-title {
+        font-size: 0.9rem;
+    }
+}

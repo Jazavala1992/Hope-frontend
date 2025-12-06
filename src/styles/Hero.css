@@ -1,85 +1,338 @@
 .hero-container {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
 }
 
-/* Sección principal con imagen de fondo */
-.hero-section {
-    height: 80vh;
-    min-height: 500px;
-    background-image: url('../images/conocenos.png'); /* Cambia por una imagen */
+.hero-container > section {
+    margin: 0;
+    padding: 0;
+}
+
+/* ========== HERO TITLE SECTION ========== */
+.hero2-title {
+    position: relative;
+    width: 100%;
+    min-height: 70vh;
+    background-image: url('../images/conocenos.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
-.hero-overlay {
+.hero-title-overlay {
     position: absolute;
     top: 0;
-    left: 100px;
+    left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(40, 56, 144, 0.5);
+    background: rgba(0, 0, 0, 0.3);
     display: flex;
     align-items: center;
-    max-width: 700px;
-}
-
-.hero-content {
-    max-width: 600px;
     padding: 0 80px;
-    margin: 0 auto;
-    color: white;
-    text-align: left;
 }
 
-.hero-title {
-    font-size: 3rem;
+.hero-title-content {
+    max-width: 700px;
+    color: #fff;
+}
+
+.hero-main-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 30px;
+    line-height: 1.2;
+    display: inline-block;
+
+    color: #2BBEE8;
+}
+
+.hero-subtitle {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    font-weight: 600;
+    color: #fff;
+    display: inline-block;
+    padding: 10px 15px;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
+.hero-btn-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.hero-donate-btn {
+    background: #2BBEE8;
+    color: #fff;
+    padding: 16px 45px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(232, 119, 77, 0.4);
+}
+
+.hero-donate-btn:hover {
+    background: #283890;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.hero-arrow-icon {
+    width: 120px;
+    height: 80px;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 8px rgba(232, 119, 77, 0.3));
+    animation: bounceArrow 2s infinite;
+}
+
+@keyframes bounceArrow {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* ========== CARRUSEL HERO ========== */
+.hero-carousel {
+    position: relative;
+    width: 100%;
+    min-height: 80vh;
+    background: #f5f7fa;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.carousel-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    max-width: 1400px;
+    width: 100%;
+    padding: 60px 80px;
+    align-items: center;
+}
+
+/* Lado izquierdo - Texto */
+.carousel-text {
+    color: #1a2560;
+    animation: fadeInLeft 0.8s ease-out;
+}
+
+.carousel-title {
+    font-size: 3.2rem;
     font-weight: 800;
     margin-bottom: 30px;
     letter-spacing: -1px;
     line-height: 1.2;
+    color: #283890;
 }
 
-.hero-description {
-    font-size: 1.5rem;
-    line-height: 1.6;
-    font-weight: 600;
-    margin: 0;
+.carousel-description {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    font-weight: 500;
+    margin-bottom: 40px;
+    color: #444;
     text-align: justify;
 }
 
-/* Sección de información */
-.info-section {
-    background-color: white;
-    padding: 80px 0;
+/* Cita bíblica */
+.carousel-quote {
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
-.info-section .container {
+.quote-text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    font-weight: 700;
+    color: #283890;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.quote-reference {
+    font-size: 1rem;
+    font-weight: 700;
+    color: black;
+    text-align: right;
+    margin-top: 8px;
+}
+
+/* Indicadores de slides */
+.carousel-indicators {
+    display: flex;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid #283890;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.indicator.active {
+    background: #283890;
+    width: 40px;
+    border-radius: 6px;
+}
+
+.indicator:hover {
+    background: rgba(40, 56, 144, 0.5);
+}
+
+/* Lado derecho - Media */
+.carousel-media {
+    width: 100%;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    animation: fadeInRight 0.8s ease-out;
+}
+
+.carousel-image,
+.carousel-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border: none;
+}
+
+/* Cuando solo hay texto (sin imagen/video) */
+.carousel-content:has(.carousel-media:empty),
+.carousel-content:not(:has(.carousel-media)) {
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+.carousel-content:has(.carousel-media:empty) .carousel-text,
+.carousel-content:not(:has(.carousel-media)) .carousel-text {
+    max-width: 900px;
+    text-align: center;
+}
+
+.carousel-content:has(.carousel-media:empty) .carousel-description,
+.carousel-content:not(:has(.carousel-media)) .carousel-description {
+    text-align: center;
+}
+
+.carousel-content:has(.carousel-media:empty) .carousel-indicators,
+.carousel-content:not(:has(.carousel-media)) .carousel-indicators {
+    justify-content: center;
+}
+
+/* Botones de navegación */
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    color: #283890;
+    border: none;
+    width: 40px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-arrow:hover {
+    background: #283890;
+    color: #fff;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-arrow.prev {
+    left: 20px;
+}
+
+.carousel-arrow.next {
+    right: 20px;
+}
+
+/* Animaciones */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ========== SECCIÓN INFO (sin cambios) ========== */
+.info-section {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 30px;
 }
 
 .info-content {
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
+    text-align: justify;
 }
 
 .info-paragraph {
     font-size: 1.1rem;
     line-height: 1.8;
-    color: #2c3e50;
+    color: #444;
     margin-bottom: 30px;
-    text-align: justify;
-}
-
-.info-paragraph:last-child {
-    margin-bottom: 0;
 }
 
 .info-paragraph strong {
@@ -87,60 +340,271 @@
     font-weight: 700;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .hero-section {
-        height: 50vh;
-        min-height: 400px;
-        justify-content: center;
+/* ========== RESPONSIVE ========== */
+
+/* Tablets (<=1024px) */
+@media (max-width: 1024px) {
+    /* Hero Title */
+    .hero-title {
+        min-height: 60vh;
     }
 
-    .hero-content {
-        max-width: 100%;
+    .hero-title-overlay {
+        padding: 0 50px;
+    }
+
+    .hero-main-title {
+        font-size: 3.2rem;
+        padding: 12px 25px;
+    }
+
+    .hero-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .hero-btn-container {
+        gap: 25px;
+    }
+
+    .hero-donate-btn {
+        font-size: 1.1rem;
+        padding: 14px 40px;
+    }
+
+    .hero-arrow-icon {
+        width: 55px;
+        height: 55px;
+    }
+
+    /* Carrusel */
+    .carousel-content {
+        gap: 40px;
+        padding: 40px 40px;
+    }
+
+    .carousel-title {
+        font-size: 2.8rem;
+    }
+
+    .carousel-description {
+        font-size: 1.2rem;
+    }
+
+    .carousel-media {
+        height: 400px;
+    }
+
+    .carousel-arrow {
+        width: 45px;
+        height: 45px;
+        font-size: 1.8rem;
+    }
+
+    .carousel-arrow.prev {
+        left: 20px;
+    }
+
+    .carousel-arrow.next {
+        right: 20px;
+    }
+}
+
+/* Tablets pequeñas y móviles grandes (<=768px) */
+@media (max-width: 768px) {
+    /* Hero Title */
+    .hero-title {
+        min-height: 50vh;
+    }
+
+    .hero-title-overlay {
         padding: 0 30px;
+        justify-content: center;
         text-align: center;
     }
 
-    .hero-title {
+    .hero-title-content {
+        max-width: 100%;
+    }
+
+    .hero-main-title {
+        font-size: 2.5rem;
+        padding: 10px 20px;
+    }
+
+    .hero-subtitle {
+        font-size: 1.3rem;
+        margin-bottom: 30px;
+    }
+
+    .hero-btn-container {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .hero-donate-btn {
+        font-size: 1rem;
+        padding: 12px 35px;
+    }
+
+    .hero-arrow-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* Carrusel */
+    .hero-carousel {
+        min-height: auto;
+    }
+
+    .carousel-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 40px 30px;
+    }
+
+    .carousel-text {
+        order: 2;
+        text-align: center;
+    }
+
+    .carousel-media {
+        order: 1;
+        height: 300px;
+    }
+
+    .carousel-title {
         font-size: 2.2rem;
         margin-bottom: 20px;
     }
 
-    .hero-description {
+    .carousel-description {
         font-size: 1.1rem;
-        line-height: 1.5;
+        margin-bottom: 30px;
+    }
+
+    .carousel-indicators {
+        justify-content: center;
+    }
+
+    .carousel-arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+
+    .carousel-arrow.prev {
+        left: 10px;
+    }
+
+    .carousel-arrow.next {
+        right: 10px;
     }
 
     .info-section {
-        padding: 60px 0;
+        padding: 50px 0;
     }
 
     .info-paragraph {
         font-size: 1rem;
-        line-height: 1.7;
-        text-align: left;
+        margin-bottom: 25px;
     }
 }
 
+/* Móviles pequeños (<=576px) */
 @media (max-width: 576px) {
-    .hero-content {
+    /* Hero Title */
+    .hero-title {
+        min-height: 45vh;
+    }
+
+    .hero-title-overlay {
         padding: 0 20px;
     }
 
-    .hero-title {
+    .hero-main-title {
+        font-size: 2rem;
+        padding: 8px 16px;
+        margin-bottom: 20px;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 25px;
+    }
+
+    .hero-subtitle br {
+        display: none;
+    }
+
+    .hero-btn-container {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .hero-donate-btn {
+        font-size: 0.95rem;
+        padding: 10px 30px;
+    }
+
+    .hero-arrow-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    /* Carrusel */
+    .carousel-content {
+        padding: 30px 20px;
+        gap: 20px;
+    }
+
+    .carousel-title {
         font-size: 1.8rem;
     }
 
-    .hero-description {
+    .carousel-description {
         font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .carousel-media {
+        height: 250px;
+        border-radius: 12px;
+    }
+
+    .carousel-arrow {
+        width: 35px;
+        height: 35px;
+        font-size: 1.3rem;
+    }
+
+    .carousel-arrow.prev {
+        left: 5px;
+    }
+
+    .carousel-arrow.next {
+        right: 5px;
+    }
+
+    .indicator {
+        width: 10px;
+        height: 10px;
+    }
+
+    .indicator.active {
+        width: 30px;
     }
 
     .info-section {
         padding: 40px 0;
     }
 
+    .container {
+        padding: 0 20px;
+    }
+
     .info-paragraph {
         font-size: 0.95rem;
-        margin-bottom: 25px;
+        margin-bottom: 20px;
     }
 }

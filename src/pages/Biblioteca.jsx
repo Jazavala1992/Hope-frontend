@@ -1,8 +1,13 @@
+import { useEffect } from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import Cardlibros from "../biblioteca components/Cardlibros";
 
 function Biblioteca() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
     <Navigation />

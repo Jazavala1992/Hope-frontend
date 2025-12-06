@@ -117,6 +117,51 @@
   color: #fff;
 }
 
+/* transición suave para cambio de tamaño */
+.btn-esperanza {
+  transition: all 180ms ease;
+}
+
+/* versión compacta (cuando se abre el menú móvil) */
+.btn-esperanza--compact {
+  padding: 8px 16px;
+  font-size: 0.95rem;
+  border-radius: 12px;
+  margin-left: 8px;
+  box-shadow: 0 1px 6px rgba(40,56,144,0.06);
+}
+
+/* ajustar tamaño extra en móvil si quieres aún más compacto */
+@media (max-width: 768px) {
+  .btn-esperanza--compact {
+    padding: 10px 14px;
+    font-size: 0.95rem;
+    width: auto;
+    margin: 6px 12px 0 0;
+  }
+}
+
+/* Botón hamburger */
+.navbar-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  margin-left: 12px;
+}
+.navbar-toggle .bar {
+  display: block;
+  width: 26px;
+  height: 3px;
+  margin: 5px 0;
+  background: #283890;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+.navbar-toggle .bar.open:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.navbar-toggle .bar.open:nth-child(2) { opacity: 0; }
+.navbar-toggle .bar.open:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
 @media (max-width: 1024px) {
   .navbar-content {
     padding: 0 16px;
@@ -151,7 +196,35 @@
   .btn-esperanza {
     margin-left: 0;
     margin-top: 10px;
-    width: 100%;
+    max-width: 200px;
     text-align: center;
+  }
+  /* Mostrar botón y ocultar links por defecto */
+  .navbar-toggle { display: block; }
+  .navbar-content { flex-direction: row; align-items: center; justify-content: space-between; padding: 8px 16px; }
+  .navbar-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    gap: 0;
+    padding: 12px 16px;
+    box-shadow: 0 2px 12px rgba(40,56,144,0.08);
+    border-radius: 0 0 12px 12px;
+  }
+  .navbar-links.mobile-open {
+    display: flex;
+  }
+  .navbar-links li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.04);
+  }
+  .navbar-links li:last-child { border-bottom: none; }
+  .btn-esperanza {
+    width: calc(100% - 32px);
+    margin: 12px 16px 0;
   }
 }

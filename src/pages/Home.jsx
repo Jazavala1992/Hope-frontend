@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Header from "../components/Header";
 import Metricas from "../components/Metricas";
 import Programas from "../components/Programas";
@@ -7,6 +8,10 @@ import Navigation from "../components/Navigation";
 import CarruselHistorias from "../components/CarruselHistorias";
 
 function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <Navigation />

@@ -70,3 +70,21 @@
         padding: 0 15px;
     }
 }
+
+/* Ajustes para muy pequeñas pantallas para evitar que estas secciones empujen o solapen el siguiente contenido */
+@media (max-width: 600px) {
+    .programas-hero {
+        height: auto !important;
+        min-height: auto !important;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+    .programashero-overlay {
+        position: relative;
+        top: auto;
+        left: 0;
+        right: 0;
+        bottom: auto;
+        max-height: none;
+    }
+}

@@ -1,0 +1,286 @@
+/* Sección de Voluntariado - Lleva Esperanza */
+.voluntariado-section {
+  width: 100%;
+  padding: 80px 20px;
+  background-color: #f8f9fa;
+}
+
+.voluntariado-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Grid de dos columnas */
+.voluntariado-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* Estilos comunes */
+.voluntariado-titulo {
+  font-size: 36px;
+  font-weight: 700;
+  color: #283890;
+  margin-bottom: 20px;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.voluntariado-subtitulo,
+.voluntariado-descripcion {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+/* Lado izquierdo - Brigadas Internacionales */
+.voluntariado-internacional {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.brigada-destacada {
+  background: linear-gradient(135deg, #f0f7ff 0%, #e8f4f8 100%);
+  border: 2px solid #2BBEE8;
+  border-radius: 16px;
+  padding: 30px;
+  margin-top: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.brigada-nombre {
+  font-size: 24px;
+  font-weight: 700;
+  color: #283890;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.urgencia-container {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.urgencia-texto {
+  font-size: 18px;
+  color: #333;
+  font-weight: 500;
+}
+
+.urgencia-highlight {
+  color: #e74c3c;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* Cuenta regresiva */
+.cuenta-regresiva {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 0;
+  flex-wrap: wrap;
+}
+
+.tiempo-bloque {
+  background: white;
+  border: 2px solid #2BBEE8;
+  border-radius: 12px;
+  padding: 15px 20px;
+  text-align: center;
+  min-width: 80px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tiempo-numero {
+  display: block;
+  font-size: 30px;
+  font-weight: 700;
+  color: #283890;
+  line-height: 1;
+}
+
+.tiempo-label {
+  display: block;
+  font-size: 14px;
+  color: #666;
+  margin-top: 8px;
+  font-weight: 600;
+}
+
+.tiempo-separador {
+  font-size: 40px;
+  font-weight: 700;
+  color: #283890;
+}
+
+/* Lado derecho - Voluntariado Local */
+.voluntariado-local {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+/* Botones */
+.btn-brigada {
+  background: #2BBEE8;
+  color: white;
+  padding: 18px 40px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  display: block;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(43, 190, 232, 0.4);
+  margin: 20px auto 0;
+  text-align: center;
+  width: fit-content;
+}
+
+.btn-brigada:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(43, 190, 232, 0.6);
+  background: #283890;
+  color: white;
+}
+
+.btn-voluntariado {
+  background: #283890;
+  color: white;
+  padding: 18px 40px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(40, 56, 144, 0.4);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.btn-voluntariado:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(40, 56, 144, 0.6);
+  background: #2BBEE8;
+}
+
+.btn-voluntariado-local {
+  background: #2BBEE8;
+  margin-top: 20px;
+}
+
+.btn-voluntariado-local:hover {
+  background: #283890;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .voluntariado-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .voluntariado-titulo {
+    font-size: 32px;
+  }
+
+  .tiempo-bloque {
+    min-width: 80px;
+    padding: 12px 15px;
+  }
+
+  .tiempo-numero {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .voluntariado-section {
+    padding: 60px 15px;
+  }
+
+  .voluntariado-internacional,
+  .voluntariado-local {
+    padding: 30px 20px;
+  }
+
+  .voluntariado-titulo {
+    font-size: 28px;
+  }
+
+  .voluntariado-subtitulo,
+  .voluntariado-descripcion {
+    font-size: 16px;
+  }
+
+  .brigada-destacada {
+    padding: 20px;
+  }
+
+  .brigada-nombre {
+    font-size: 20px;
+  }
+
+  .tiempo-bloque {
+    min-width: 70px;
+    padding: 10px 12px;
+  }
+
+  .tiempo-numero {
+    font-size: 28px;
+  }
+
+  .tiempo-separador {
+    font-size: 30px;
+  }
+
+  .btn-voluntariado,
+  .btn-brigada {
+    padding: 15px 30px;
+    font-size: 16px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .cuenta-regresiva {
+    gap: 8px;
+  }
+
+  .tiempo-separador {
+    display: none;
+  }
+
+  .tiempo-bloque {
+    min-width: 60px;
+    padding: 8px 10px;
+  }
+
+  .tiempo-numero {
+    font-size: 24px;
+  }
+
+  .tiempo-label {
+    font-size: 12px;
+  }
+}

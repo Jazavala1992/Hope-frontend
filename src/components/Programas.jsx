@@ -1,10 +1,12 @@
 import '../styles/Programas.css';
+import { useNavigate } from 'react-router-dom';
 import biblioteca from '../images/biblioteca.png';
 import dpi from '../images/DPI.png';
 import eslImage from '../images/ESL.png'; 
 import voluntariado from '../images/Voluntariado.jpg';
 
 function Programas() {
+    const navigate = useNavigate();
     const programas = [
         {
             id: 1,
@@ -60,7 +62,12 @@ function Programas() {
                                 <div className="programa-texto">
                                     <h3>{programa.titulo}</h3>
                                     <p>{programa.descripcion}</p>
-                                    <button className="btn-leer-mas">{programa.boton}</button>
+                                    <button 
+                                        className="btn-leer-mas"
+                                        onClick={() => navigate('/programas')}
+                                    >
+                                        {programa.boton}
+                                    </button>
                                 </div>
                             </div>
                         </div>

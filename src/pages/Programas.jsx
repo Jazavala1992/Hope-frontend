@@ -13,6 +13,7 @@ function Programas() {
 
   useEffect(() => {
     if (programa) {
+      // Si hay un programa específico, hacer scroll a esa sección
       setTimeout(() => {
         const element = document.getElementById(programa);
         if (element) {
@@ -22,6 +23,9 @@ function Programas() {
           });
         }
       }, 100);
+    } else {
+      // Si no hay parámetro, ir al inicio de la página
+      window.scrollTo(0, 0);
     }
   }, [programa]);
 
