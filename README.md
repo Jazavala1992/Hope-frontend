@@ -1,12 +1,61 @@
-# React + Vite
+# HOPE — Frontend (React + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Descripción breve
+-
+Frontend de la aplicación HOPE construido con React y Vite. Contiene los componentes, páginas y estilos usados por la aplicación pública.
 
-Currently, two official plugins are available:
+Estructura principal
+-
+- `src/` — Código fuente React
+	- `components/` — Componentes reutilizables (Header, Footer, Navigation, etc.)
+	- `pages/` — Páginas (Home, Conocenos, Programas, Biblioteca, Llevaesperanza, Contactanos)
+	- `assets/`, `images/`, `logos/`, `iconos/` — Recursos estáticos
+	- `biblioteca-components/`, `programs-components/`, `conocenos-components/`, `llevaesperanza-components/` — carpetas de componentes por sección (se normalizaron nombres: sin espacios)
+	- `biblioteca-styles/`, `conocenos-styles/`, `llevaesperanza-styles/` — estilos por sección (renombradas para evitar espacios)
+	- `styles/` — estilos globales
+- `public/` — Archivos estáticos que se copian tal cual
+- `package.json`, `vite.config.js` — configuración y scripts
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Requisitos
+-
+- Node.js 18+ recomendado
+- npm (o yarn/pnpm) instalado
 
-## Expanding the ESLint configuration
+Instalación y arranque en desarrollo
+-
+1. Instalar dependencias:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+```
+
+2. Arrancar servidor de desarrollo (Vite):
+
+```bash
+npm run dev
+```
+
+Compilación para producción
+-
+```bash
+npm run build
+
+# Para previsualizar el build:
+npm run preview
+```
+
+Notas importantes
+-
+- Se normalizaron nombres de carpetas que contenían espacios: por ejemplo `biblioteca components` → `biblioteca-components`, `Biblioteca Styles` → `biblioteca-styles`. Si copias/pegas código antiguo, actualiza imports.
+- Los comandos anteriores asumen que trabajas desde la carpeta del proyecto `hope-frontend`.
+
+Flujo de trabajo Git
+-
+- Rama principal: `main`
+- Para cambios: crear rama feature/bugfix, hacer commits claros y abrir PR hacia `main`.
+
+Contacto / Soporte
+-
+Si necesitas ayuda con la inicialización o tienes problemas al ejecutar, abre un issue o contacta al responsable del repositorio.
+
+Archivo: [hope-frontend/README.md](hope-frontend/README.md)
