@@ -1,4 +1,4 @@
-import '../Conocenos Styles/Valores.css'; 
+import '../conocenos-styles/Valores.css'; 
 import comprimiso from '../iconos/compromiso.png';
 import servicio from '../iconos/servicio.png';
 import bienestar from '../iconos/bienestar.png';

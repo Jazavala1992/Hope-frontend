@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
-import Cardlibros from "../biblioteca components/Cardlibros";
+import Cardlibros from "../biblioteca-components/Cardlibros";
 
 function Biblioteca() {
   useEffect(() => {

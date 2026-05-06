@@ -2,11 +2,11 @@ import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
-import ProgramasHero from "../programs components/ProgramasHero";
-import Biblioteca from "../programs components/Biblioteca";
-import Dpi from "../conocenos components/Dpi";
-import Esl from '../programs components/Esl';
-import Voluntariado from '../programs components/Voluntariado';
+import ProgramasHero from "../programs-components/ProgramasHero";
+import Biblioteca from "../programs-components/Biblioteca";
+import Dpi from "../conocenos-components/Dpi";
+import Esl from '../programs-components/Esl';
+import Voluntariado from '../programs-components/Voluntariado';
 
 function Programas() {
   const { programa } = useParams();

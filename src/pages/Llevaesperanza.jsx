@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
-import LlevaesperanzaHero from "../llevaesperanza components/LlevaesperanzaHero";
-import Donaciones from "../llevaesperanza components/Donaciones";
-import VoluntariadoLlevaEsperanza from "../llevaesperanza components/VoluntariadoLlevaEsperanza";
+import LlevaesperanzaHero from "../llevaesperanza-components/LlevaesperanzaHero";
+import Donaciones from "../llevaesperanza-components/Donaciones";
+import VoluntariadoLlevaEsperanza from "../llevaesperanza-components/VoluntariadoLlevaEsperanza";
 import CarruselHistorias from "../components/CarruselHistorias";
 
 function Llevaesperanza() {

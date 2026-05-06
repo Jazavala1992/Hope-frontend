@@ -1,4 +1,4 @@
-import '../Conocenos Styles/Visionymision.css'; 
+import '../conocenos-styles/Visionymision.css'; 
 import { Link } from 'react-router-dom';
 import flechaIcon from '../iconos/flecha.png';
 

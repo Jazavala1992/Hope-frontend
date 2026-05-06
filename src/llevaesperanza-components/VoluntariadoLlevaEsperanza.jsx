@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import '../Llevaesperanza Styles/VoluntariadoLlevaEsperanza.css';
+import '../llevaesperanza-styles/VoluntariadoLlevaEsperanza.css';
 
 function VoluntariadoLlevaEsperanza() {
   // Fecha objetivo para la cuenta regresiva (ajusta según tu brigada)

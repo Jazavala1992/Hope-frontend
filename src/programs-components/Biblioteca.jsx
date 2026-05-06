@@ -1,4 +1,4 @@
-import '../Biblioteca Styles/Biblioteca.css';
+import '../biblioteca-styles/Biblioteca.css';
 import bib1 from '../images/Bib1.jpg';
 import bib2 from '../images/Bib2.jpg';
 import bib3 from '../images/Bib3.jpg';

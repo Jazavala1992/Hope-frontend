@@ -1,4 +1,4 @@
-import '../Biblioteca Styles/Cardlibros.css';
+import '../biblioteca-styles/Cardlibros.css';
 
 function Cardlibros() {
   return (

@@ -1,11 +1,8 @@
-import '../Biblioteca Styles/Dpi.css';
-import dpi1 from '../images/dpi1.jpg';
-import dpi2 from '../images/dpi2.jpg';
-import dpi3 from '../images/dpi3.jpg';
+import '../biblioteca-styles/Dpi.css';
 
 function Dpi() {
     return (
-        <section className="dpi-section">
+        <section className="dpi-section" style={{ paddingTop: '80px' }}>
             <div className="container">
                 {/* Título y descripción principal */}
                 <div className="dpi-header">
@@ -23,7 +20,7 @@ function Dpi() {
                     {/* Actividad 1 */}
                     <div className="activity-card">
                         <div className="activity-image">
-                            <img src={dpi1} alt="Visita a hogares" />
+                            <img src="../images/dpi-1.jpg" alt="Visita a hogares" />
                         </div>
                         <div className="activity-content">
                             <p className="activity-text">
@@ -35,7 +32,7 @@ function Dpi() {
                     {/* Actividad 2 */}
                     <div className="activity-card">
                         <div className="activity-image">
-                            <img src={dpi2}  alt="Día del parque" />
+                            <img src="../images/dpi-2.jpg" alt="Día del parque" />
                         </div>
                         <div className="activity-content">
                             <p className="activity-text">
@@ -47,7 +44,7 @@ function Dpi() {
                     {/* Actividad 3 */}
                     <div className="activity-card">
                         <div className="activity-image">
-                            <img src={dpi3}  alt="Pan y palabra" />
+                            <img src="../images/dpi-3.jpg" alt="Pan y palabra" />
                         </div>
                         <div className="activity-content">
                             <p className="activity-text">
@@ -59,11 +56,11 @@ function Dpi() {
                     {/* Actividad 4 */}
                     <div className="activity-card">
                         <div className="activity-image">
-                            <img src={dpi1} alt="Lend HOPE" />
+                            <img src="../images/dpi-4.jpg" alt="Lend HOPE" />
                         </div>
                         <div className="activity-content">
                             <p className="activity-text">
-                                "Lend HOPE": Programa de micro préstamos para emprendimientos familiares.
+                                "Lend HOPE": microcréditos para emprendedores.
                             </p>
                         </div>
                     </div>

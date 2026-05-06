@@ -1,4 +1,4 @@
-import '../Biblioteca Styles/Esl.css';
+import '../biblioteca-styles/Esl.css';
 import esl1 from '../images/img1.jpg';
 import esl2 from '../images/Farid.png';
 

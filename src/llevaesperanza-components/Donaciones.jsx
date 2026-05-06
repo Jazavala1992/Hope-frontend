@@ -1,5 +1,5 @@
 
-import '../Llevaesperanza Styles/Donaciones.css';
+import '../llevaesperanza-styles/Donaciones.css';
 import qrImage from '../images/QR.jpeg';
 
 function Donaciones() {

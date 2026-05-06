@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
-import Hero from '../conocenos components/Hero';
-import Valores from "../conocenos components/Volores";
-import Visionymision from "../conocenos components/Visionymision";
+import Hero from '../conocenos-components/Hero';
+import Valores from "../conocenos-components/Volores";
+import Visionymision from "../conocenos-components/Visionymision";
 function conocenos () {
   useEffect(() => {
     window.scrollTo(0, 0);

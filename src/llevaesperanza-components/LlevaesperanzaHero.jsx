@@ -1,4 +1,4 @@
-import '../Llevaesperanza Styles/LlevaesperanzaHero.css';
+import '../llevaesperanza-styles/LlevaesperanzaHero.css';
 import donacionesImg from '../images/Donaciones.jpg';
 import flechaIcon from '../iconos/flecha.png';
 

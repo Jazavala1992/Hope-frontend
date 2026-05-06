@@ -1,4 +1,4 @@
-import '../Biblioteca Styles/Voluntariado.css';
+import '../biblioteca-styles/Voluntariado.css';
 import vol1 from '../images/Voluntariado.jpg';
 import vol2 from '../images/img1.jpg';
 import vol3 from '../images/dpi1.jpg';
